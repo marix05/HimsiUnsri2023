@@ -16,21 +16,9 @@ class AdminSeeder extends Seeder
         Admin::truncate();
 
         Admin::create([
-            'username' => 'admin',
-            'password' => bcrypt('ptiaja'),
+            'username' => 'exm',
+            'password' => bcrypt('exm'),
             'akses' => 'Admin',
-        ]);
-
-        Admin::create([
-            'username' => 'humasian',
-            'password' => bcrypt('medinfo'),
-            'akses' => 'Humas',
-        ]);
-
-        Admin::create([
-            'username' => 'ristekverse',
-            'password' => bcrypt('subarashii'),
-            'akses' => 'Ristek',
         ]);
         }
 }
