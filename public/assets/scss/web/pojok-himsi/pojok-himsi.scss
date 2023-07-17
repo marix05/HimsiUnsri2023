@@ -1,0 +1,143 @@
+section.hero {
+    position: relative;
+    height: 80vh;
+    max-height: 800px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../assets/img/pojok-himsi-banner.jpg");
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: hsla(0, 0%, 0%, 0.6);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .hero__content {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            max-width: 700px;
+
+            .hero__title {
+                font-size: var(--big-font-size);
+                font-weight: var(--font-bold);
+            }
+
+            .button {
+                padding: 3% 5%;
+            }
+        }
+    }
+}
+
+section.pojokHimsi {
+    .container {
+        .section__title {
+            position: relative;
+            margin-bottom: 6.5rem;
+
+            .periode__nav {
+                position: absolute;
+                bottom: -2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 0.75rem;
+
+                .button--link {
+                    font-weight: 500;
+                    color: #000;
+                }
+
+                .button--link.active {
+                    font-weight: var(--font-bold);
+                    color: var(--first-color);
+                }
+            }
+        }
+
+        .pojokHimsi__content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2.5rem;
+        }
+
+        .pojokHimsi__item {
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+            padding: 5%;
+
+            .grid__container {
+                display: grid;
+                row-gap: 1rem;
+                align-items: center;
+
+                .pojokHimsi__img {
+                    max-height: 350px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                }
+
+                .pojokHimsi__data {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.75rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 3px 12px rgba(65, 11, 16, 0.15);
+            }
+        }
+
+        .pagination {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1rem;
+            row-gap: 0.5rem;
+            margin-top: 3rem;
+            justify-content: center;
+
+            a {
+                font-weight: var(--font-medium);
+            }
+
+            a.active {
+                color: var(--first-color);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section.pojokHimsi {
+        .container {
+            .pojokHimsi__item {
+                padding: 2rem;
+
+                .grid__container {
+                    grid-template-columns: 40% 57%;
+                    column-gap: 3%;
+
+                    .pojokHimsi__img {
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

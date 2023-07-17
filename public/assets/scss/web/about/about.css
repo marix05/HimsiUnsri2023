@@ -1,0 +1,133 @@
+section.logo .grid__container-2 {
+  row-gap: 0;
+  max-width: 900px;
+  margin: auto;
+}
+section.logo .logo__img {
+  max-width: 350px;
+  width: 100%;
+  justify-self: center;
+}
+section.logo .logo__data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  text-align: justify;
+}
+
+section.visiMisi .grid__container-2 {
+  max-width: 900px;
+  margin: auto;
+}
+section.visiMisi .visiMisi__img {
+  max-width: 350px;
+  width: 100%;
+  justify-self: center;
+}
+section.visiMisi .visiMisi__data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  text-align: justify;
+}
+section.visiMisi .visiMisi__data .visi__data,
+section.visiMisi .visiMisi__data .misi__data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+section.visiMisi .visiMisi__data .visi__data .misi__description ol,
+section.visiMisi .visiMisi__data .misi__data .misi__description ol {
+  padding-left: 1rem;
+}
+
+section.proker .proker__container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  position: relative;
+  row-gap: 1.5rem;
+}
+section.proker .proker__container::before {
+  content: " ";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+  left: 0.5rem;
+}
+section.proker .proker__item {
+  width: 100%;
+  position: relative;
+}
+section.proker .proker__item:nth-child(odd) {
+  padding-right: 0;
+  padding-left: 2.5rem;
+}
+section.proker .proker__item:nth-child(even) {
+  padding-right: 0;
+  padding-left: 2.5rem;
+}
+section.proker .proker__item .proker__dot {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  background: #ededed;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  left: -0.3rem;
+  border-radius: 50%;
+}
+section.proker .proker__item .proker__dot i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--first-color);
+  transform: translate(-50%, -50%);
+}
+section.proker .proker__item .proker__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(65, 11, 16, 0.15);
+  padding: 1rem;
+}
+section.proker .button {
+  padding: 3% 5%;
+}
+
+@media only screen and (max-width: 320px) {
+  section.proker .proker__container::before {
+    content: none;
+  }
+  section.proker .proker__item:nth-child(odd) {
+    padding-left: 0;
+  }
+  section.proker .proker__item:nth-child(even) {
+    padding-left: 0;
+  }
+  section.proker .proker__item .proker__dot {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.proker .proker__container {
+    max-width: 1200px;
+  }
+  section.proker .proker__container::before {
+    left: calc(50% - 2.5px);
+  }
+  section.proker .proker__item:nth-child(odd) {
+    padding-right: calc(50% + 2.5rem);
+    padding-left: 0;
+  }
+  section.proker .proker__item:nth-child(even) {
+    padding-left: calc(50% + 2.5rem);
+    padding-right: 0;
+  }
+  section.proker .proker__item .proker__dot {
+    left: calc(50% - 1rem);
+  }
+}/*# sourceMappingURL=about.css.map */
